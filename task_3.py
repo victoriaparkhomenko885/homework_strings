@@ -1,0 +1,5 @@
+number1 = input("Enter an integer: ")
+n_list = list(number1)
+n_list.reverse()
+number2 = "".join(n_list)
+print('"Inverse" number: ', number2)
