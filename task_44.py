@@ -1,8 +1,8 @@
 def input_number():
-    number = input("Input your str  ") 
+    number = input("Input your str:  ") 
     try:
         number = int(number)
-        if(number>0):
+        if number > 0:
             print("This str is natural number!")
         else:
             return 0

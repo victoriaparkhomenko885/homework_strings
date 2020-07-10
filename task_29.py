@@ -3,25 +3,28 @@ import random
 counter = 0
 number = 0
 check = False
-Str=""
+text = "44828adfrtHP"
 
-while(counter<5):
-    number = random.randint(-8,8)
-    if(number % 2 == 0):
-       Str += str(number)
+
+while counter < 5:
+    number = random.randint(-8, 8)
+    if number % 2 == 0:
+        text += str(number)
     else:
-       Str += str(number+1)        
-    if(number == 8 or number == 7):
-      check = True
-    counter+=1
+        text += str(number+1)
+    if number == 8 or number == 7:
+        check = True
+    counter += 1
 
-while(counter<10):  
-    Str += chr(random.randint(97,121))
-    counter+=1
 
-if(check):
-   Str += "AB" 
+while counter < 10:
+    text += chr(random.randint(97, 121))
+    counter += 1
+
+if check:
+   text += "AB"
 else:
-   Str += "XY"
+   text += "XY"
 
-print(Str)
+
+print(text)

@@ -1,12 +1,13 @@
-Str_input = input("Input your str ")
-Str_output=""
+text_input = input("Input your str: ")
+text_output = ""
 
-for i in Str_input :
-    if (i == 'a'):
-        Str_output+='A'
-    if (i == 'b'):
-        Str_output+='B'
-    if(i!='a' and i!='b'):
-          Str_output+=i
+for s in text_input :
+    if s == 'a':
+        text_output += 'A'
+    if s == 'b':
+        text_output += 'B'
+    if s!='a' and s!='b':
+        text_output += s
 
-print(Str_output)
+
+print(text_output)

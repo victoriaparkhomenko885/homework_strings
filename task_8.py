@@ -1,9 +1,10 @@
-def palindrome(num):
-    a=num[::-1]
-    if num==a:
-        print (num,"is palindrome")
+def palindrome(number):
+    a = number[::-1]
+    if number == a:
+        print(number, "is palindrome")
     else:
-        print (num,"is not palindrome")
+        print(number, "is not palindrome")
 
-x=input("Enter to check palindrome:")
+
+x = input("Enter to check palindrome: ")
 palindrome(x)

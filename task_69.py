@@ -1,36 +1,40 @@
-def Max_local_(Str,Max_local=0,counter=0,Max_lenght_words_pos=0):
-    for i in Str:
-        if Max_local < len(i):
-            Max_local = len(i)
-            Max_lenght_words_pos=counter
-        counter+=1
-    return Max_lenght_words_pos
+def max_local(text, max_loc=0, counter=0, max_lenght_words_pos=0):
+    for x in text:
+        if max_loc < len(x):
+            max_loc = len(x)
+            max_lenght_words_pos = counter
+        counter += 1
+    return max_lenght_words_pos
 
 
-def Min_local_(Str,counter=0,Min_lenght_words_pos=0):
-    Min_local=len(Str[0])
-    for i in Str:
-        if Min_local > len(i):
-            Min_local = len(i)
-            Min_lenght_words_pos=counter
-        counter+=1
-    return Min_lenght_words_pos
+def min_local(text, counter=0, min_lenght_words_pos=0):
+    min_local = len(text[0])
+    for x in text:
+        if min_local > len(x):
+            min_local = len(x)
+            min_lenght_words_pos = counter
+        counter += 1
+    return min_lenght_words_pos
 
 
-Str = input("Input str with words ")
-Str = Str.split()
+text = input("Input str with words: ")
+text = text.split()
 
-Max_lenght_words_pos=0
-Min_lenght_words_pos=0
 
-Max_lenght_words_pos = Max_local_(Str)
-Min_lenght_words_pos = Min_local_(Str)
+max_lenght_words_pos = 0
+min_lenght_words_pos = 0
 
-Str_t = Str[Max_lenght_words_pos]
-Str[Max_lenght_words_pos] = Str[Min_lenght_words_pos]
-Str[Min_lenght_words_pos] = Str_t
-Str_output=""
-for i in Str:
-    Str_output += i 
 
-print(Str_output)
+max_lenght_words_pos = max_local(text)
+min_lenght_words_pos = min_local(text)
+
+
+line_t = text[max_lenght_words_pos]
+text[max_lenght_words_pos] = text[min_lenght_words_pos]
+text[min_lenght_words_pos] = line_t
+text_output = ""
+for x in text:
+    text_output += x 
+
+
+print(text_output)

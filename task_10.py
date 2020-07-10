@@ -1,18 +1,18 @@
 def input_number():
-    Max_number = input("Input your max natural number  ") 
+    max_number = input("Input your max natural number:  ")
     try:
-        Max_number = int(Max_number)
-        return Max_number
+        max_number = int(max_number)
+        return max_number
     except ValueError:
-        print("natural number!")
+        print("Natural number!")
         return 0
 
 
 counter = 1
-Max_number = input_number()
-if( Max_number > 0):
-    while(Max_number != counter):
+max_number = input_number()
+if max_number > 0:
+    while max_number != counter:
         print(counter)
-        counter=counter+1
+        counter = counter + 1
 else:
     print("Error")

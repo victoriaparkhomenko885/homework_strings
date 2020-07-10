@@ -1,17 +1,17 @@
 counter = 1 
 
-Str_input = input("Input your string  ")
-Str_output=""
+text_input = input("Input your string:  ")
+text_output = ""
 
-for ch in Str_input :
-
-    if(counter % 2 == 0):
-        if( ch == 'a' or ch == 'b'):
-            Str_output+='c'
+for even in text_input :
+    if counter % 2 == 0:
+        if even == 'a' or even == 'b':
+            text_output += 'c'
         else:
-            Str_output+='a'
+            text_output += 'a'
     else:
-        Str_output+=ch
-    counter+=1
+        text_output += even
+    counter += 1
 
-print(Str_output)
+
+print(text_output)
