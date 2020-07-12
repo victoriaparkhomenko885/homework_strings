@@ -56,7 +56,7 @@ def gen_password():
 
 
 def determinant_algotitm(line):
-    if line[len(line) - 1] == "_" and line[len(line) - 3] == "_" and line[len(line) - 2] == "!":
+    if line[len(line)-1] == "_" and line[len(line)-3] == "_" and line[len(line)-2] == "!":
         print("Yes")
     else:
         print("No")
@@ -67,5 +67,4 @@ while x < 20:
     line1 = gen_password()
     print(line1)
     determinant_algotitm(line1)
-    x += 1
-    
+    x += 1   
